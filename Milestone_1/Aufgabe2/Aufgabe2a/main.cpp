@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 //using namespace std;
-//Und das ist ein weiterer Test um zu schauen ob es auch rückwärts funktioniert.
+
 
 
 class NBild {
@@ -105,7 +105,7 @@ void cBild::addBlock(int x, int y, char valuePic, char valueRand){ // soll aus d
     }
     else{
         //std::cout << valuePic << " " << valueRand << " ";
-        std::cerr << "Fehler";
+        //std::cerr << "Fehler";
     }
 
 }
@@ -120,7 +120,7 @@ std::vector<int> cBild::calculateBlock(int x, int y){  //soll berechnen welche S
     xy2 = (2*y)*(altcols+1)+((2*x)+1);
     xy3 = ((2*x)+1)+(altcols)+(2*y);
     xy4 = ((2*x)+1)+(altcols)+((2*y)+1);
-    std::cout << xy1 << " " << xy2 << " " << xy3 << " " << xy4 << " " << std::endl;
+    //std::cout << xy1 << " " << xy2 << " " << xy3 << " " << xy4 << " " << std::endl;
     blockCoords.push_back(xy1); //fügt die berechneten Stellen in einen Vector ein, damit dieser dann ausgegeben werden kann.
     blockCoords.push_back(xy2);
     blockCoords.push_back(xy3);
@@ -171,13 +171,13 @@ void cBild::encrypt(){
         addBlock(vecrow, veccol, active[i], key[i]);
     }
     int counter = 0;
-    for(int i=0; i < 179; i++ ) {
+//    for(int i=0; i < 179; i++ ) {
 
-        for(int j=0; j < 607; j++) {
-            std::cout << bildVector[counter++];
-        }
-        std::cout << std::endl;
-    }
+//        for(int j=0; j < 607; j++) {
+//            std::cout << bildVector[counter++];
+//        }
+//        std::cout << std::endl;
+//    }
 
     //jetzt muss das resultierende Blocklbild in einer txt Datei gespeichert werden.
     std::ofstream blockpic;
@@ -369,11 +369,11 @@ void NBild::gui(){
     if(input==9){ //der Inhalt des aktiven Bilds soll mit dem Inhalt in reandomkey.txt mithilfe von encrypt verschlüsselt werden.
                     //wie kann ich in der NBild Funktion gui () dei cBild Funktion encrypt() aufrufen?
         writePicture("activepicture.txt"); // Das aktive Bild wird in activepicture.txt gespeichert, damit die andere Funktion darauf zugreifen kann.
-        std::cout << "test";
+        //std::cout << "test";
         cBild cbild1{};
-        std::cout << "test1";
+        //std::cout << "test1";
         cbild1.encrypt();
-        std::cout << "test2";
+        //std::cout << "test2";
         std::cout << "The encrypted picture is now stored in encryptedPicture.txt" << std::endl;
         gui();
     }
