@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 //using namespace std;
-//Hey das ist ein Test um zu schauen ob das mit Git funktioniert.
+//Und das ist ein weiterer Test um zu schauen ob es auch rückwärts funktioniert.
 
 
 class NBild {
